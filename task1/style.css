@@ -119,6 +119,14 @@ body {
     align-items: center;
 }
 
+.action_bar div img {
+    transition: all 200ms ease;
+}
+
+.action_bar div:hover img {
+    padding: 2px;
+}
+
 .promise {
     position: absolute;
     width: 250px;
@@ -147,5 +155,13 @@ body {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    border: 2px solid #00dbb9;
     align-items: center;
+    transition: all 200ms ease-in;
+}
+
+.social_icons div:hover {
+    background-color: #00d5b520;
+    border: 2px solid #00dbb9;
+    color: #00dbb9;
 }
