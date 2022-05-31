@@ -6,6 +6,7 @@
 }
 
 body {
+    min-width: 1450px;
     background-image: url("./images/background.jpg");
     background-size: cover;
     min-height: 100%;
