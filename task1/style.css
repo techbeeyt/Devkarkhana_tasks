@@ -6,11 +6,11 @@
 }
 
 body {
-    min-width: 1450px;
     background-image: url("./images/background.jpg");
     background-size: cover;
-    min-height: 100%;
     background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
 }
 
 .navbar {
@@ -164,4 +164,10 @@ body {
     background-color: #00d5b520;
     border: 2px solid #00dbb9;
     color: #00dbb9;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        min-width: 1520px;
+    }
 }
