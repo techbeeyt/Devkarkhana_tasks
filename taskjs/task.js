@@ -421,25 +421,25 @@ and sort them according to their points
 and display their full name, point and company only */
 let newArr = data.filter((item) => item.point >= 50);
 newArr.sort((a, b) => a.point - b.point);
-console.log("\n\n\n");
+console.log("\n\n\nUsers who have more than 50 points:");
+let output = [];
 newArr.map((item) => {
-    console.log({
+    output.push({
         fullName: item.firstName + " " + item.lastName,
         point: item.point,
         company: item.company,
     });
 });
 
+console.log(output);
+
 /* 2. Count houw many users got point more than 20 and less tham 50 */
 console.log("\n\n\n");
-
 const num = data.reduce((sum, item) => {
     if (item.point > 20 && item.point < 50) {
         return (sum = sum + 1);
     } else return sum;
 }, 0);
-console.log("\n");
-
 console.log("Count of people got point more than 20 and less tham 50 = " + num);
 console.log("\n\n\n");
 
@@ -452,13 +452,15 @@ const findUser = data.find((item) => item.email === "Tristian7@yahoo.com");
 console.log(
     "Point of user with email 'Tristian7@yahoo.com' = " + findUser.point
 );
-console.log("\n");
-
+console.log("\n\n\nUsers who have same point as 'Tristian7@yahoo.com': ");
+let output2 = [];
 data.map((item) => {
     if (item.point == findUser.point) {
-        console.log({
+        output2.push({
             email: item.email,
             point: item.point,
         });
     }
 });
+
+console.log(output2);
