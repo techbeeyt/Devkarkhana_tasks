@@ -1,0 +1,14 @@
+.header {
+    background-color: #333;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
