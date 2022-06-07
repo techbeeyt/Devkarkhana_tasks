@@ -14,7 +14,25 @@ convert_to_binary = () => {
     console.log(122 + " to bindary: " + int_bin + "\n");
 };
 
+convert_to_decimal = () => {
+    let int_bin = 1111010,
+        store_bin = int_bin,
+        int_dec = 0,
+        bin_temp = [];
+
+    while (int_bin > 0) {
+        bin_temp.push(int_bin % 10);
+        int_bin = parseInt(int_bin / 10);
+    }
+    for (let i = 0; i < bin_temp.length; i++) {
+        int_dec = int_dec + bin_temp[i] * Math.pow(2, i);
+    }
+
+    console.log(store_bin + " to decimal = " + int_dec + "\n\n\n");
+};
+
 convert_to_binary();
+convert_to_decimal();
 
 /* 
 2. Write a Program that will find out maximum number from any nested array.
