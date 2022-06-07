@@ -400,21 +400,21 @@ const data = [{
     },
 ];
 
-const vals = {};
+// const vals = {};
 
-data.forEach((v) => {
-    if (vals[v.point]) {
-        vals[v.point] += 1;
-    } else {
-        vals[v.point] = 1;
-    }
-});
+// data.forEach((v) => {
+//     if (vals[v.point]) {
+//         vals[v.point] += 1;
+//     } else {
+//         vals[v.point] = 1;
+//     }
+// });
 
-for (let i in vals) {
-    if (vals[i] > 1) {
-        console.log(`${i} ---> ${vals[i]}`);
-    }
-}
+// for (let i in vals) {
+//     if (vals[i] > 1) {
+//         console.log(`${i} ---> ${vals[i]}`);
+//     }
+// }
 
 /*1. List of users containing a minimum of 50 points,
 and sort them according to their points
@@ -422,16 +422,15 @@ and display their full name, point and company only */
 let newArr = data.filter((item) => item.point >= 50);
 newArr.sort((a, b) => a.point - b.point);
 console.log("\n\n\nUsers who have more than 50 points:");
-let output = [];
-newArr.map((item) => {
-    output.push({
+let output = newArr.map((item) => {
+    return {
         fullName: item.firstName + " " + item.lastName,
         point: item.point,
         company: item.company,
-    });
+    };
 });
 
-console.log(output);
+console.table(output);
 
 /* 2. Count houw many users got point more than 20 and less tham 50 */
 console.log("\n\n\n");
@@ -463,4 +462,4 @@ data.map((item) => {
     }
 });
 
-console.log(output2);
+console.table(output2);
