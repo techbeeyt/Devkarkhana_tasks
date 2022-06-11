@@ -41,7 +41,6 @@ Array example is [2,3,[5,6,[7,8],9]]
 */
 
 let arr = [2, 3, [5, 6, [7, 8], 9]];
-
 arr = arr.flat(Infinity);
 
 let max = -Infinity;
@@ -61,12 +60,12 @@ console.log("Maximum number from the array is : " + max + "\n\n\n");
 */
 
 let str =
-    "This is a string to calculate the frequency . It is easy to calculate the frequency of words";
+    "This is a string to calculate the frequency .Is It is easy to calculate the frequency of words";
 let store_str = str;
 
 str = str.replace(".", "");
 str = str.replace("  ", " ");
-
+str = str.toLowerCase();
 str = str.split(" ");
 
 let freq = {};

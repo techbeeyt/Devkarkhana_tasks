@@ -1,0 +1,72 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search_bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search_form {
+    margin: 0 auto;
+}
+
+.table_container {
+    width: 100%;
+}
+
+#user_list_table {
+    margin: 10px auto;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.f_n_btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.full_name {
+    font-size: 20;
+    font-weight: bold;
+}
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
