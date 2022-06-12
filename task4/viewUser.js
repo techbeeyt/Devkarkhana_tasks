@@ -410,6 +410,8 @@ const user = data.find((item) => {
 console.log(user);
 
 const heroDiv = document.getElementsByClassName("hero")[0];
+const promptDiv = document.getElementsByClassName("prompt")[0];
+promptDiv.style.display = "none";
 
 let userData = document.createElement("div");
 
@@ -427,9 +429,38 @@ userData.innerHTML = `
 
 heroDiv.appendChild(userData);
 
+let promptData = document.createElement("div");
+promptData.classList.add("prompt_2");
+
+promptData.innerHTML = `
+<div class="prompt_3">
+<h1>Are you sure to delete this user ?</h1>
+<button id="cancel_del">Cancel</button>
+<button id="confirm_del">Delete</button>
+</div>
+`;
+
+promptDiv.appendChild(promptData);
+
 const editBtn = document.getElementById("edit_this_user");
 const delBtn = document.getElementById("del_this_user");
 
 editBtn.addEventListener("click", () => {
     location.href = `edit_user_info.html?user=${user.email}`;
+});
+
+delBtn.addEventListener("click", () => {
+    promptDiv.style.display = "block";
+});
+
+const confirmDel = document.getElementById("confirm_del");
+const cancelDel = document.getElementById("cancel_del");
+
+confirmDel.addEventListener("click", () => {
+    promptDiv.style.display = "none";
+    location.href = "index.html";
+});
+
+cancelDel.addEventListener("click", () => {
+    promptDiv.style.display = "none";
 });
