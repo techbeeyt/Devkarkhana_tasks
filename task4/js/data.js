@@ -1,4 +1,4 @@
-const data = [{
+const data = JSON.stringify([{
         firstName: "Westley",
         lastName: "Effertz",
         email: "Marty.Green@hotmail.com",
@@ -398,58 +398,7 @@ const data = [{
         phone: "956-985-0182",
         company: "Bruen Group",
     },
-];
-
-const queryString = window.location.search;
-
-const urlParams = new URLSearchParams(queryString);
-const user = data.find((item) => {
-    return item.email === urlParams.get("user");
-});
-
-const heroDiv = document.getElementsByClassName("hero")[0];
-
-let userData = document.createElement("div");
-
-userData.innerHTML = `
-<form class="edit_form">
-<p>First Name: </p>
-<input type="text" name="firstName" value="${user.firstName}">
-<p>Last Name: </p>
-<input type="text" name="lastName" value="${user.lastName}">
-<p>Email: </p>
-<input type="text" name="email" value="${user.email}">
-<p>Point: </p>
-<input type="text" name="point" value="${user.point}">
-<p>Phone: </p>
-<input type="text" name="phone" value="${user.phone}">
-<p>Company: </p>
-<input type="text" name="company" value="${user.company}">
-<br />
-<button id="save_user_data">Save</button>
-</form>
-
-`;
-heroDiv.appendChild(userData);
-
-const saveBtn = document.getElementById("save_user_data");
-const firstNameEdited = document.querySelector('[name="firstName"]');
-const lastNameEdited = document.querySelector('[name="lastName"]');
-const emailEdited = document.querySelector('[name="email"]');
-const pointEdited = document.querySelector('[name="point"]');
-const phoneEdited = document.querySelector('[name="phone"]');
-const companyEdited = document.querySelector('[name="company"]');
-
-saveBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.table({
-        firstName: firstNameEdited.value,
-        lastName: lastNameEdited.value,
-        email: emailEdited.value,
-        point: pointEdited.value,
-        phone: phoneEdited.value,
-        company: companyEdited.value,
-    });
-    alert("User Data has been Changed Successfully");
-    location.href = "index.html";
-});
+]);
+if (!localStorage.getItem("usersData")) {
+    localStorage.setItem("usersData", data);
+}
