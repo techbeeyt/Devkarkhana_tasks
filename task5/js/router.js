@@ -14,6 +14,7 @@ const route = (event) => {
 const routes = {
     "/": home(),
     "/index.html": home(),
+    "/Devkarkhana_tasks/task5": home(),
     "/bmi-calculator": bmi(),
     "/bmr-calculator": bmr(),
     "/calorie-calculator": calorie(),
