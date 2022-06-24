@@ -1,4 +1,5 @@
 import { bmiDOM } from "./js/pages/bmi.js";
+import { bmrDOM } from "./js/pages/bmr.js";
 
 export const $ = (val) => {
     const values = document.querySelectorAll(val);
@@ -13,4 +14,8 @@ export const DOMupdate = () => {
     if ($("#bmi")) {
         bmiDOM();
     }
+
+    if ($("#bmr")) {
+        bmrDOM();
+    };
 };
