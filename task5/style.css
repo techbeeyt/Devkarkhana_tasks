@@ -47,7 +47,6 @@ footer {
     font-family: "Playfair Display";
     width: 60%;
     margin: 30px auto 0px auto;
-    min-height: calc(100vh - 95px);
 }
 
 .navigation {
