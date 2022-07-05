@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.letter-spacing-2px {
+    letter-spacing: 2px;
+}
+
+.logo {
+    margin-right: auto;
+}
