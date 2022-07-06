@@ -133,6 +133,8 @@ export const bmiDOM = () => {
         if (BMI.toPrecision(3) >= 25 && BMI.toPrecision(3) < 30) {
             $("line").setAttribute("x2", 75);
             $("line").setAttribute("y2", 106);
+            $("line animateTransform").setAttribute("from", "0 111 111");
+            $("line animateTransform").setAttribute("to", "0 140 140");
         }
         if (BMI.toPrecision(3) >= 30 && BMI.toPrecision(3) < 35) {
             $("line").setAttribute("x2", 100);

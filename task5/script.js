@@ -14,7 +14,6 @@ export const DOMupdate = () => {
     if ($("#bmi")) {
         bmiDOM();
     }
-
     if ($("#bmr")) {
         bmrDOM();
     };
